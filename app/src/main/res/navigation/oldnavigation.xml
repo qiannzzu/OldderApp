@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/oldnavigation"
+    app:startDestination="@id/desktopFragment">
+
+    <fragment
+        android:id="@+id/desktopFragment"
+        android:name="com.example.myapp.old.desktop.desktopFragment"
+        android:label="fragment_desktop"
+        tools:layout="@layout/fragment_desktop" >
+        <action
+            android:id="@+id/action_desktopFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_desktopFragment_to_goOutFragment"
+            app:destination="@id/goOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.myapp.old.desktop.notificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/goOutFragment"
+        android:name="com.example.myapp.old.desktop.goOutFragment"
+        android:label="fragment_go_out"
+        tools:layout="@layout/fragment_go_out" />
+</navigation>
