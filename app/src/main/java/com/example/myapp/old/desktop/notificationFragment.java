@@ -3,6 +3,7 @@ package com.example.myapp.old.desktop;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,8 +17,12 @@ import com.example.myapp.old.R;
  * create an instance of this fragment.
  */
 public class notificationFragment extends Fragment {
+    String notifyPerson[] = {"隔壁老吳","曹汶龍醫師", "施慧玲教授", "國立中正大學"};
+    String notifyActivities[] = {"邀請你一起下棋","邀請你去記憶保養班","邀請你去長者人權門診","邀請你一同上課"};
+    int notifyImages[] = {R.drawable.wu,R.drawable.person_docter,R.drawable.person_shi,R.drawable.ccu};
 
-    // TODO: Rename parameter arguments, choose names that match
+    RecyclerView recyclerView;
+
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -55,6 +60,7 @@ public class notificationFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        recyclerView.findViewById(R.id.notification_RecyclerView);
     }
 
     @Override
