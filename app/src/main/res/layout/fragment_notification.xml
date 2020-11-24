@@ -12,6 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ScrollView>
+
         <TextView
             android:id="@+id/notification_tv"
             android:layout_width="0dp"
@@ -30,11 +37,12 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/notification_RecyclerView"
             android:layout_width="409dp"
-            android:layout_height="642dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="87dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/notification_tv" />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
